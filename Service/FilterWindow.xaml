@@ -1,0 +1,17 @@
+﻿<Window x:Name="FilterWindow1" x:Class="Service.FilterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Service"
+        mc:Ignorable="d"
+        Title="Фильтр" Height="350" Width="350" MinWidth="300" MinHeight="300" WindowStyle="ToolWindow" Loaded="FilterWindow1_Loaded" KeyDown="FilterWindow1_KeyDown">
+    <Grid>
+        <TextBlock VerticalAlignment="Top" Margin="10,10,130,0" Height="35"><Run Text="Укажите данные для фильтрации"/><Run Text="."/><LineBreak/><Run/><Run Text="Оставьте поле пустым для пропуска"/></TextBlock>
+        <DataGrid x:Name="FilterDataGrid" Margin="10,50,10,45" Grid.ColumnSpan="2" CanUserSortColumns="False" CanUserReorderColumns="False" SelectionUnit="Cell" CanUserAddRows="False"/>
+        <Button x:Name="SearchButton" Content="Найти" HorizontalAlignment="Right" Height="25" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="76" Click="SaveButton_Click"/>
+        <Button x:Name="CancelButton" Content="Отмена" HorizontalAlignment="Left" Height="25" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="77" Click="CancelButton_Click"/>
+        <CheckBox x:Name="AndCheckBox" Content='Фильтрация "И"' HorizontalAlignment="Left" Margin="217,11,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

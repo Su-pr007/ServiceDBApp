@@ -1,0 +1,25 @@
+﻿<Window x:Name="ConnectionSettingsWindow" x:Class="Service.ConnSettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Service"
+        mc:Ignorable="d"
+        Title="Настройки соединения" Height="450" Width="400" Loaded="Window_Loaded" MinWidth="300" MinHeight="300" Icon="ico.ico" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" KeyDown="ConnectionSettingsWindow_KeyDown">
+    <Grid>
+        <Label Content="MySQL настройки соединения" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="IP сервера" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="DBIpTextBox" KeyDown="DBIpTextBox_KeyDown" HorizontalAlignment="Center" Height="30" Margin="0,140,0,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" FontSize="18" Width="200"/>
+
+        <Label Content="Порт сервера" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="DBPortTextBox" KeyDown="DBPortTextBox_KeyDown" HorizontalAlignment="Center" Height="30" Margin="0,220,0,0" TextWrapping="Wrap" Text="3307" VerticalAlignment="Top" FontSize="18" Width="200"/>
+
+        <Label Content="Название базы данных" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="DBNameTextBox" KeyDown="DBNameTextBox_KeyDown" HorizontalAlignment="Center" Height="30" Margin="0,300,0,0" TextWrapping="Wrap" Text="service" VerticalAlignment="Top" FontSize="18" Width="200"/>
+
+        <Button x:Name="CancelButton" Content="Отмена" HorizontalAlignment="Left" Margin="30,0,0,30" VerticalAlignment="Bottom" Padding="10,1" FontSize="18" Click="CancelButton_Click"/>
+        <Button x:Name="SaveButton" Content="Принять" HorizontalAlignment="Right" Margin="0,0,30,30" VerticalAlignment="Bottom" Padding="10,1" FontSize="18" Click="SaveButton_Click"/>
+        <Button Content="По умолчанию" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Padding="10,1" Click="Button_Click"/>
+
+    </Grid>
+</Window>

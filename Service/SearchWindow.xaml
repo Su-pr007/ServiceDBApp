@@ -1,0 +1,15 @@
+﻿<Window x:Name="SearchWindow1" x:Class="Service.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Service"
+        mc:Ignorable="d"
+        Title="Поиск" Height="200" Width="300" MinWidth="300" MinHeight="200" WindowStartupLocation="CenterOwner" Loaded="SearchWindow_Loaded" MaxWidth="300" MaxHeight="200" ResizeMode="NoResize" WindowStyle="ToolWindow" KeyDown="SearchWindow1_KeyDown">
+    <Grid>
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Center" Height="23" Margin="0" TextWrapping="Wrap"   VerticalAlignment="Center" Width="120" KeyDown="SearchTextBox_KeyDown"/>
+        <Button Content="Поиск" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Center" Width="75" Click="Button_Click"/>
+        <Label Content="Введите данные для поиска" HorizontalAlignment="Center" Margin="0,0,0,60" VerticalAlignment="Center" MaxWidth="250"/>
+
+    </Grid>
+</Window>
